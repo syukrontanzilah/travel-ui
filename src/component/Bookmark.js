@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         right:32,
         top:-56/2,
         alignSelf:'flex-end',
+        zIndex:10
         
       
         

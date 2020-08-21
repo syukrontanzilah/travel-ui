@@ -5,6 +5,7 @@ import Hotel from './Hotel'
 import Header from '../component/Header'
 import Bookmark from '../component/Bookmark'
 import About from '../component/About'
+import Stats from '../component/Stats'
 
 const Home = () => {
     return (
@@ -15,7 +16,11 @@ const Home = () => {
             <Header />
            <View>
                 <Bookmark/>
-                <About/>
+                <View style={{marginTop:-56}}>
+                     <About/>
+                </View>
+                <Stats/>
+               
            </View>
                
          
