@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { RangeObservable } from 'rxjs/observable/RangeObservable'
 
 export const colors = {
     darkGB: '#222',
@@ -7,7 +8,8 @@ export const colors = {
     lightHL: '#888',
     pink: '#ea3372',
     text: '#fff',
-    textSec: '#aaa'
+    textSec: '#aaa',
+    orange: '#f97878'
 
 }
 
@@ -34,6 +36,12 @@ export const gs = StyleSheet.create({
         color: colors.text,
         fontSize: 30,
     },
+    subTitle: {
+        textTransform: 'uppercase',
+        color: 'rgba(255,255,255,0.6)',
+        fontSize: 15,
+        letterSpacing: 1
+    },
     divider: {
         borderBottomColor: '#444',
         borderBottomWidth: 0.8,
@@ -57,7 +65,7 @@ export const gs = StyleSheet.create({
     button: {
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: colors.pink, 
-        borderRadius:100
+        backgroundColor: colors.pink,
+        borderRadius: 100
     }
 })
