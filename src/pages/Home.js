@@ -8,6 +8,7 @@ import About from '../component/About'
 import Stats from '../component/Stats'
 import Fasilitas from '../component/Fasilitas'
 import Address from '../component/Address'
+import Extra from '../component/Extra'
 
 const Home = () => {
     return (
@@ -19,11 +20,12 @@ const Home = () => {
             <View>
                 <Bookmark />
                 <View style={{ marginTop: -56 }}>
-                <About />
+                    <About />
                 </View>
                 <Stats />
                 <Fasilitas />
                 <Address />
+                <Extra />
             </View>
         </ScrollView>
     )
