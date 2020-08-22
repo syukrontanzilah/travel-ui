@@ -20,27 +20,44 @@ export const gs = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
     },
-    center:{
-        alignItems:'center',
-        justifyContent:'center'
-    }, 
-    sectionContainer:{
-        paddingVertical:24,
-        paddingHorizontal:32,
-        marginBottom:8,
+    center: {
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    sectionContainer: {
+        paddingVertical: 24,
+        paddingHorizontal: 32,
+        marginBottom: 8,
         backgroundColor: colors.lightBG
-    }, 
-    title:{
-        color:colors.text,
-        fontSize:30, 
     },
-    divider:{
-        borderBottomColor:'#444',
-        borderBottomWidth:0.8,
-        marginVertical:20
+    title: {
+        color: colors.text,
+        fontSize: 30,
     },
-    sectionTitle:{
-        fontWeight:'700',
-        color:colors.text
+    divider: {
+        borderBottomColor: '#444',
+        borderBottomWidth: 0.8,
+        marginVertical: 20
+    },
+    sectionTitle: {
+        fontWeight: '700',
+        color: colors.text
+    },
+    absoluteFull: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%'
+    },
+    smallText: {
+        fontSize: 12,
+        color: colors.text
+    },
+    button: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.pink, 
+        borderRadius:100
     }
 })

@@ -6,6 +6,8 @@ import Header from '../component/Header'
 import Bookmark from '../component/Bookmark'
 import About from '../component/About'
 import Stats from '../component/Stats'
+import Fasilitas from '../component/Fasilitas'
+import Address from '../component/Address'
 
 const Home = () => {
     return (
@@ -14,16 +16,15 @@ const Home = () => {
                 backgroundColor={colors.darkGB}
             />
             <Header />
-           <View>
-                <Bookmark/>
-                <View style={{marginTop:-56}}>
-                     <About/>
+            <View>
+                <Bookmark />
+                <View style={{ marginTop: -56 }}>
+                <About />
                 </View>
-                <Stats/>
-               
-           </View>
-               
-         
+                <Stats />
+                <Fasilitas />
+                <Address />
+            </View>
         </ScrollView>
     )
 }
