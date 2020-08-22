@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import { ImageHotel1, ImageHotel2, ImageHotel3, ImageHotel4, ImageHotel5, ImageHotel6, ImageHotel7, ImageHotel8, ImageHotel9, ImageHotel10 } from '../asset'
 import { gs } from '../utils/Styles'
 
@@ -16,16 +16,19 @@ const photos = [
     ImageHotel10
 ]
 
-const PhotosProfile = () => {
+const PhotosProfile = ({onPress}) => {
     return (
         <View style={[gs.sectionContainer, { marginTop: 8 }]}>
             <Text style={gs.sectionTitle}>My Photos</Text>
             <View style={styles.photoContainer}>
                 {photos.map((photo, index) => {
                     return (
-                        <Image source={photo} key={index} style={[styles.photo, 
+                        <TouchableOpacity onPress={onPress}>
+                                <Image source={photo} key={index} style={[styles.photo, 
                             // {marginRight: (index + 1) % 3 === 0 ? 0 : 15,}
                     ]} />
+                        </TouchableOpacity>
+                    
                     )
                 })}
             </View>

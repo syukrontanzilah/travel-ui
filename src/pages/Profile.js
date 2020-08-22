@@ -27,24 +27,24 @@ export class Profile extends Component {
         if (this.state.isLoading) {
             return (
                 <View style={[gs.center, styles.container]}>
-                    <StatusBar 
-                    barStyle="light-content"
+                    <StatusBar
+                        barStyle="light-content"
                     // backgroundColor='#f97878'
-                     />
-                    <ActivityIndicator size="large"/>
+                    />
+                    <ActivityIndicator size="large" />
                 </View>
             )
-        } 
+        }
         return (
             <ScrollView style={styles.container}>
                 <StatusBar
-                barStyle="light-content"
-                    backgroundColor='#f97878' /> 
-                <HeaderProfile user ={this.state.user} />
-                <StatProfile/>
-                <AboutProfile/>
-                <LocationProfile/>
-                <PhotosProfile/> 
+                    barStyle="light-content"
+                    backgroundColor='#f97878' />
+                <HeaderProfile user={this.state.user} />
+                <StatProfile />
+                <AboutProfile />
+                <LocationProfile />
+                <PhotosProfile onPress={() => this.props.navigation.navigate("Hotel")} />
             </ScrollView>
         )
     }
