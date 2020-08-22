@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet, StatusBar, ActivityIndicator } from 'react-native'
+import { Text, View, StyleSheet, StatusBar, ActivityIndicator, ScrollView } from 'react-native'
 import { colors, gs } from '../utils/Styles'
 import HeaderProfile from '../component/HeaderProfile'
 import StatProfile from '../component/StatProfile'
+import AboutProfile from '../component/AboutProfile'
+import LocationProfile from '../component/LocationProfile'
+import PhotosProfile from '../component/PhotosProfile'
 
 export class Profile extends Component {
     state = {
@@ -25,19 +28,24 @@ export class Profile extends Component {
             return (
                 <View style={[gs.center, styles.container]}>
                     <StatusBar 
-                    backgroundColor='#f97878'
+                    barStyle="light-content"
+                    // backgroundColor='#f97878'
                      />
                     <ActivityIndicator size="large"/>
                 </View>
             )
         } 
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <StatusBar
+                barStyle="light-content"
                     backgroundColor='#f97878' /> 
                 <HeaderProfile user ={this.state.user} />
                 <StatProfile/>
-            </View>
+                <AboutProfile/>
+                <LocationProfile/>
+                <PhotosProfile/> 
+            </ScrollView>
         )
     }
 }
